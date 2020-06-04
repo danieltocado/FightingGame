@@ -63,4 +63,4 @@ let allplayers = {
     "10": f10,
 }
 
-document.querySelector("primer-luchador").innerHTML = JSON.stringify(f1);
+

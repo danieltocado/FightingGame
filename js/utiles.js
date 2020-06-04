@@ -13,11 +13,14 @@ const funciones = {
     }
 }
 
+let pantalla1 = document.getElementById("pantalla1");
+
 document.onkeypress = function(key_dtl) {
     key_dtl = key_dtl || window.event; 
     var uni_code = key_dtl.keyCode || key_dtl.which; 
     var key_name = String.fromCharCode(uni_code); 
     organizer(2);
+    
    }
 
 $(document).ready(function(){
