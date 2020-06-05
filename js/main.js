@@ -15,7 +15,7 @@ let juego = {
             this.stats = document.getElementById("player" + i);
             this.stats.innerHTML = 
                 `
-                <img class="fotoluchador" src="/img/pj/ready_${this.equipo1[i].id}.png">
+                <img class="fotoluchador" src="/img/pj/selec/selec_${this.equipo1[i].id}.png">
                
                  `;
 
@@ -46,7 +46,7 @@ let juego = {
             this.stats = document.getElementById("play" + i2);
             this.stats.innerHTML = 
                 `
-                <img class="fotoluchador" src="/img/pj/ready_${this.equipo2[i2].id}.png">
+                <img class="fotoluchador" src="/img/pj/selec/selec_${this.equipo2[i2].id}.png">
                
                  `;
 
@@ -129,7 +129,7 @@ let juego = {
     <div class="container-luchadores-red">
         <div id="play0" class="cont-luchador-red"></div>
         <div id="play1" class="cont-luchador-red"></div>
-        <div id="play3" class="cont-luchador-red"></div>
+        <div id="play2" class="cont-luchador-red"></div>
     </div>
 </div>`;
 
@@ -140,38 +140,37 @@ let juego = {
 
 faseprevia() {
 
-    this.organizer(4);
+    organizer(4);
 
     let plena_pf = document.getElementById("pantalla4");
-    plena_pf.innerHTML = `<div class="centrar">
-    <div class="prefightking">
-        <div class="getready">
-            <div class="getready1"></div>
-            <div class="getready2">FIGHT STARTS IN A FEW SECONDS...GET READY!!!</div>
-        </div>
-        <div class="prerest">
-            
-
-            <div class="prerestin">
-                <div class="preroundt"></div>
-                
+    plena_pf.innerHTML = `
+        <div class="getready2">FIGHT STARTS IN A FEW SECONDS...GET READY!!!</div>
+        
                 <div class="preround1">
-                ${this.equipo1[0].nombre}  VS
+                ${this.equipo1[0].nombre}
+                  <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[0].id}.png">  
+                  VS
                 ${this.equipo2[0].nombre}
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[0].id}.png"> 
                 </div>
                 
                 <div class="preroundt"></div>
                 
                 <div class="preround1">
-                ${this.equipo1[1].nombre} VS
+                ${this.equipo1[1].nombre} 
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[1].id}.png">
+                VS
                 ${this.equipo2[1].nombre}
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[1].id}.png">
                 </div>
                 
                 <div class="preroundt"></div>
                 
                 <div class="preround1">
-                ${this.equipo1[2].nombre}  VS
+                ${this.equipo1[2].nombre}
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[2].id}.png">  VS
                 ${this.equipo2[2].nombre}
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[2].id}.png">
                 </div>
             
             </div>
@@ -194,7 +193,7 @@ const organizer = (arg_O) => {
 
     let fasewant = "pantalla" + arg_O;
     
-    let arrFases = ["pantalla1", "pantalla2"];
+    let arrFases = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5"];
 
     arrFases = arrFases.filter(val => !fasewant.includes(val));
 
