@@ -17,7 +17,7 @@
 #secciones {
     height:100%;
     width: 100%;
-    background-color: lightgreen;
+  
 }
 
 
@@ -139,6 +139,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .luchadores {
@@ -219,13 +220,7 @@
     
 }
 
-.selectR {
-    width: 70%;
-    background: rgb(157, 0, 0);
-    background: linear-gradient(145deg, rgb(201, 5, 5) 0%, rgba(255,255,255,1) 70%, rgb(248, 125, 125) 100%);
-    margin-top: 0 auto;
-    border-radius: 10px 10px 0px 0px;
-}
+
 
 .players {
     
@@ -236,20 +231,7 @@
 }
 
 
-.player {
-       
-        display: flex;
-        background-color: #acc1d7;
-        margin: 6px;
-        margin-bottom: 0;
-        border-top: 10px solid rgb(173, 170, 170);
-        border-left: 3px solid black;
-        border-right: 3px solid black;
-        overflow: hidden;
-        height: 304px;
-        width: 441px;
-       
-      }
+
 
 .playerR {
     display: flex;
@@ -286,14 +268,77 @@
     100% { opacity: 1.0; }
   }
          
-  
+  .ocultar {
+   
+   
+    display: none;
+}
          
        
   
-        
+  /* copieta */      
   
         
-        
+  .cont-luchador {
+    display: flex;
+    background: linear-gradient(31deg, #7eb7ff 18%, #5ba4ff 18%, #5ba4ff 27%, #3c93ff 27%, #3c93ff 55%, #d6d6d6 55%);
+
+    margin: 6px;
+    margin-bottom: 0;
+    border-top: 10px solid rgb(173, 170, 170);
+    
+    overflow: hidden;
+    height: 310px;
+    width: 312px;
+}
+
+.cont-luchador-red {
+    display: flex;
+    background: linear-gradient(31deg, #ff8989 18%, #fb5b5b 18%, #fb5b5b 27%, #ff3c3c 27%, #ff3c3c 55%, #d6d6d6 55%);
+    position: relative;
+
+    margin: 6px;
+    margin-bottom: 0;
+    border-top: 10px solid rgb(173, 170, 170);
+    
+    overflow: hidden;
+    height: 310px;
+    width: 312px;
+}
+
+   
+
+
+
+.container-luchadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(0,78,157);
+    background: linear-gradient(145deg, rgba(0,78,157,1) 0%, rgba(255,255,255,1) 70%, rgba(105,228,255,1) 100%);
+    margin-top: 0 auto;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+.container-luchadores-red{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(157, 0, 0);
+    background: linear-gradient(145deg, rgb(201, 5, 5) 0%, rgba(255,255,255,1) 70%, rgb(248, 125, 125) 100%);
+    margin-top: 0 auto;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+.foto-fighter {
+    right: 50px;
+}
+
+
   
          
     

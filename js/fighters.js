@@ -1,8 +1,10 @@
 //Estructura básica de personajes y juego
 
 class Fighter {
-    constructor(nombre, ataque, defensa, velocidad, suerte) {
+    constructor(id, imagen, nombre, ataque, defensa, velocidad, suerte) {
 
+        this.id = id;
+        this.imagen = imagen;
         this.nombre = nombre;
         this.ataque = ataque;
         this.defensa = defensa;
@@ -35,18 +37,18 @@ class Fighter {
 }
 
 //Instanciamos a los luchadores
-// nombre, ataque, defensa, velocidad, suerte
+// id, nombre, ataque, defensa, velocidad, suerte
 
-let f1 = new Fighter("Mario", 0, 0, 0, 0);
-let f2 = new Fighter("Luigi", 20, 10, 8, 15, 6, 3);
-let f3 = new Fighter("Bowser", 20, 10, 8, 15, 6, 3);
-let f4 = new Fighter("Sonic", 20, 10, 8, 15, 6, 3);
-let f5 = new Fighter("Captain Falcon", 20, 10, 8, 15, 6, 3);
-let f6 = new Fighter("Donkey Kong", 20, 10, 8, 15, 6, 3);
-let f7 = new Fighter("Fox", 20, 10, 8, 15, 6, 3);
-let f8 = new Fighter("Link", 20, 10, 8, 15, 6, 3);
-let f9 = new Fighter("Pikachu", 20, 10, 8, 15, 6, 3);
-let f10 = new Fighter("Samus", 20, 10, 8, 15, 6, 3);
+let f1 = new Fighter('1','','Mario', 20, 10, 8, 15, 6, 3);
+let f2 = new Fighter('2','','Luigi', 20, 10, 8, 15, 6, 3);
+let f3 = new Fighter('3','','Bowser', 20, 10, 8, 15, 6, 3);
+let f4 = new Fighter('4','','Sonic', 20, 10, 8, 15, 6, 3);
+let f5 = new Fighter('5','','Captain Falcon', 20, 10, 8, 15, 6, 3);
+let f6 = new Fighter('6','','Donkey Kong', 20, 10, 8, 15, 6, 3);
+let f7 = new Fighter('7','','Fox', 20, 10, 8, 15, 6, 3);
+let f8 = new Fighter('8','','Link', 20, 10, 8, 15, 6, 3);
+let f9 = new Fighter('9','','Pikachu', 20, 10, 8, 15, 6, 3);
+let f10 = new Fighter('10','','Samus', 20, 10, 8, 15, 6, 3);
 
 //Traductor
 
