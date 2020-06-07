@@ -47,6 +47,21 @@
     color: red;
 }
 
+#pantalla4 {
+    background-color: black;
+}
+
+#pantalla5 {
+    background-image: url(/img/stage/stage1.png);
+    background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+#pantalla5 img {
+    
+}
+
 .red {
     background-color: #ff8989;
 }
@@ -128,7 +143,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    
 }
 
 .panel-luchadores {
@@ -338,9 +353,66 @@
     right: 50px;
 }
 
+/* PANTALLA VERSUS */
 
-  
-         
+.prelucha-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.prelucha1 {
+    margin-left: 100px;
+}
+
+.prelucha2 {
+    margin-right: 100px;
+}
+
+.getready-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.getready-container p {
+    color: white;
+    font-family: "start";
+    font-size: 20px;
+}
+
+.teamblue p {
+    color: #acc1d7;
+}
+
+.teamred p {
+    color: red;
+}
+
+/* PANTALLA LUCHA */
+
+.header-lucha {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container-pelea {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: row;
+    color: white;
+    
+}
+
+.luchador-sprite img{
+   
+}
     
           
     

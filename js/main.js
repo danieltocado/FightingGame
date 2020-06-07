@@ -3,6 +3,10 @@ let juego = {
     equipo1: [],
     equipo2: [],
     stats: [],
+    arg1: [],
+    arg2: [],
+    cont_fight: [],
+
 
     //métodos
     escoge1(idLuchador){
@@ -28,9 +32,9 @@ let juego = {
        
        if (this.equipo1.length == 3) {
            
-            setTimeout(
-                this.seleccion2()
-                ,2000)
+            setTimeout(init = () =>{
+                this.seleccion2()}
+                ,3000)
             
         }
         console.log(this.equipo1);
@@ -59,9 +63,9 @@ let juego = {
        
        if (this.equipo2.length === 3) {
            
-            setTimeout(
-                this.faseprevia()
-                ,2000)
+            setTimeout(init2 = () =>{
+                this.faseprevia()}
+                ,3000)
             
         } 
 
@@ -144,46 +148,94 @@ faseprevia() {
 
     let plena_pf = document.getElementById("pantalla4");
     plena_pf.innerHTML = `
-        <div class="getready2">FIGHT STARTS IN A FEW SECONDS...GET READY!!!</div>
-        
-                <div class="preround1">
+        <div class="getready-container">
+            <div class="teamblue"><p>TEAM BLUE</p></div>
+            <div class="getready"><p>GET READY</p></div>
+            <div class="teamred"><p>TEAM RED</p></div>
+        </div>
+        <div class="prelucha-container">
+            <div class="prelucha1">
                 ${this.equipo1[0].nombre}
                   <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[0].id}.png">  
-                  VS
+                ${this.equipo1[1].nombre} 
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[1].id}.png">  
+                ${this.equipo1[2].nombre}
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[2].id}.png">
+            </div>
+
+            <div class="prelucha-versus">
+                <img src="/img/prelucha/versus.png" alt="">
+            </div>
+
+            <div class="prelucha2">
                 ${this.equipo2[0].nombre}
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[0].id}.png"> 
-                </div>
-                
-                <div class="preroundt"></div>
-                
-                <div class="preround1">
-                ${this.equipo1[1].nombre} 
-                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[1].id}.png">
-                VS
                 ${this.equipo2[1].nombre}
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[1].id}.png">
-                </div>
-                
-                <div class="preroundt"></div>
-                
-                <div class="preround1">
-                ${this.equipo1[2].nombre}
-                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[2].id}.png">  VS
-                ${this.equipo2[2].nombre}
+                 ${this.equipo2[2].nombre}
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[2].id}.png">
-                </div>
-            
             </div>
-            
-        </div>
+        </div> 
     </div>`
-    },
-/*
-    setTimeout(
-        this.faselucha()
-        ,2000)
+    
 
-    },*/
+    setTimeout(init2 = () =>{
+        this.faselucha()}
+        ,5000);
+
+    
+
+    },
+
+faselucha() {
+    organizer(5);
+    randombg();
+
+    if (this.cont_fight < 3) {
+            
+        //luchadores actuales.
+        arg1 = this.equipo1[this.cont_fight];
+        arg2 = this.equipo2[this.cont_fight];
+
+        let plena_pf3 = document.getElementById("pantalla5");
+        plena_pf3.innerHTML = `
+        
+    <div class="header-lucha">
+    
+        <div class="cab2">TURNO ${this.cont_fight + 1}</div>
+    
+    </div>
+
+    <div class="container-pelea">
+        <div class="container-equipo1">
+            <div class="luchador1-nombre">${this.equipo1[0].nombre}</div>
+            <div id="glad1v" class="luchador1-vida">PLAYER 1 LIFE : ${this.equipo1[0].vida}</div>
+            <div class="luchador-sprite"><img src="./img/sprites/sprite_${this.equipo1[0].id}_equipo_1.png"></div>
+        </div>
+        <div class="container-equipo2">
+            <div class="luchador2-nombre">${this.equipo2[0].nombre}</div>
+            <div id="glad2v" class="luchador2-vida">PLAYER 2 LIFE : ${this.equipo2[0].vida}</div>
+            <div class="luchador-sprite"><img src="./img/sprites/sprite_${this.equipo2[0].id}_equipo_2.png"></div>
+        </div>
+    </div>
+<div class="announcement">
+    <div class="ann1"></div>
+    <div id ="anuncioko" class="ann2"></div>
+    <div class="ann3"></div>
+</div>
+<div class="punch">
+    <div class="pun1"></div>
+    <div class="pun2"><img id="fist" class ="hitter" src="./img/punch.png" onclick="game.turnoFight(arg1,arg2)"></div>
+    <div class="pun3"></div>
+</div>`;
+    } else {
+        console.log("hemos llegao")
+        /*//entramos en la fase final....
+        resolveIn(1500).then(delay => {
+            this.init6();
+        });*/
+    }
+    },
 
    
 
