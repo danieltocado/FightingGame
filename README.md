@@ -1,4 +1,4 @@
-# JS Fighting Game
+# JS Fighting Game (PreAlpha)
 
 _Fighting game made with JavaScript_
 

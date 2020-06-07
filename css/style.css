@@ -8,18 +8,18 @@
     src: url("/fonts/PrStart.ttf");
   }
 
-  html, body{
+html, body{
     height:100%;
     margin: 0;
   }
 
-  
+/* IDS */ 
+
 #secciones {
     height:100%;
     width: 100%;
   
 }
-
 
 #pantalla1 {
     background-color: #ececec;
@@ -64,20 +64,16 @@
     width: 200px;
 }
 
+/* CLASES */ 
+
 .red {
     background-color: #ff8989;
 }
 
 .header {
     background-color: black;
-    
     width: 100%;
     height: 5%;
-    
-}
-
-.imagenlogo{
-    
 }
 
 .imagenlogo img{
@@ -89,7 +85,6 @@
     width: 100%;
     height: 12em;
     background-color: #050505;
-     
 }
 
 .footer p {
@@ -114,13 +109,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
 }
 
 .pulsaboton h1 {
     color: #f9c2be;
     font-family: Arial, Helvetica, sans-serif;
-    
     letter-spacing: 5px;
     margin-right: 15px;
 }
@@ -132,7 +125,6 @@
     color: blue;
     background-color: black;
     padding-top: 30px;
-  
 }
 
 .volver {
@@ -145,7 +137,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .panel-luchadores {
@@ -163,7 +154,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 }
 
 .luchador {
@@ -198,12 +188,9 @@
     transition: transform .3s; 
 }
 
-
 .fotoluchador img:hover {
     transform: scale(1.1);
 }
-
-
 
 .nombre {
     font-family: 'Roboto', sans-serif;
@@ -214,6 +201,7 @@
     -webkit-text-stroke: 1px black;
     color: white;
 }
+
 /*
 .custom-cursor {
     cursor: url(/img/cursor.png), auto;
@@ -222,7 +210,6 @@
 
 
 .selectplayers {
-    
     width: 100%;
     display: flex;
     justify-content: center;
@@ -234,76 +221,54 @@
     background: linear-gradient(145deg, rgba(0,78,157,1) 0%, rgba(255,255,255,1) 70%, rgba(105,228,255,1) 100%);
     margin-top: 0 auto;
     border-radius: 10px 10px 0px 0px;
-    
 }
 
-
-
 .players {
-    
     display: flex;
     height: 100%;
     width: 100%;
-    
 }
-
-
-
 
 .playerR {
     display: flex;
-        background-color: #ff8989;
-        margin: 6px;
-        margin-bottom: 0;
-        border-top: 10px solid rgb(173, 170, 170);
-        border-left: 3px solid black;
-        border-right: 3px solid black;
-        overflow: hidden;
-        height: 304px;
-        width: 441px;
+    background-color: #ff8989;
+    margin: 6px;
+    margin-bottom: 0;
+    border-top: 10px solid rgb(173, 170, 170);
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    overflow: hidden;
+    height: 304px;
+    width: 441px;
 }
         
 .text {
-    
     text-transform:uppercase;
   }
-  .parpadea {
-    
+  
+.parpadea {
     animation-name: parpadeo;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
   
-   
-  }
-  
-  
-  
-  @keyframes parpadeo {  
+@keyframes parpadeo {  
     0% { opacity: 1.0; }
      50% { opacity: 0.0; }
     100% { opacity: 1.0; }
-  }
+}
          
-  .ocultar {
-   
-   
+.ocultar {
     display: none;
 }
          
-       
-  
-  /* copieta */      
-  
-        
-  .cont-luchador {
+.cont-luchador {
     display: flex;
     background: linear-gradient(31deg, #7eb7ff 18%, #5ba4ff 18%, #5ba4ff 27%, #3c93ff 27%, #3c93ff 55%, #d6d6d6 55%);
-
     margin: 6px;
     margin-bottom: 0;
     border-top: 10px solid rgb(173, 170, 170);
-    
     overflow: hidden;
     height: 310px;
     width: 312px;
@@ -313,19 +278,13 @@
     display: flex;
     background: linear-gradient(31deg, #ff8989 18%, #fb5b5b 18%, #fb5b5b 27%, #ff3c3c 27%, #ff3c3c 55%, #d6d6d6 55%);
     position: relative;
-
     margin: 6px;
     margin-bottom: 0;
     border-top: 10px solid rgb(173, 170, 170);
-    
     overflow: hidden;
     height: 310px;
     width: 312px;
 }
-
-   
-
-
 
 .container-luchadores{
     display: flex;
@@ -425,8 +384,6 @@
 
 .info-equipo {
     margin-top: 30px;
-    
-    
 }
 
 .container-info {
@@ -443,7 +400,6 @@
     align-items: flex-end;
     flex-direction: row;
     color: white;
-    
 }
 
 .lucha-ataque {

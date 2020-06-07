@@ -9,14 +9,19 @@
 </head>
 <body class = "custom-cursor">
     
-    <!-- <audio id="myAudio" autoplay="autoplay">
+    <audio id="myAudio" autoplay="autoplay">
         <source src="/sound/menu-ultimate.mp3" />     
-    </audio> -->
+    </audio> 
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        audio.volume = 0.1;
+    </script>
 
 
     <section onclick='setTimeout(function(){ organizer(2);},1000)' class="secvis" id="pantalla1">
         <div class="header">
-            <p>Ver 1.0</p>
+            <p>Pre-alpha version</p>
         </div>
         <div class="imagenlogo">
             <img src="/img/start/image.png" alt="">
@@ -31,7 +36,7 @@
                 <p>Original Game: &copy; Nintendo / HAL Laboratory, Inc.</p>
                 <p>Characters: &copy; Nintendo / HAL Laboratory, Inc. /</p>
                 <p>Pokémon. / Creatures Inc. / GAME FREAK inc. / SHIGESATO ITOI / APE inc. / INTELLIGENT SYSTEMS / Konami Digital Entertainment /</p>
-                <p>SEGA / CAPCOM CO., LTD. / BANDAI NAMCO Entertainment Inc. / MONOLITHSOFT / CAPCOM U.S.A., INC. / SWUARE ENIX CO., LTD.</p>
+                <p>SEGA / CAPCOM CO., LTD. / BANDAI NAMCO Entertainment Inc. / MONOLITHSOFT / CAPCOM U.S.A., INC. / SQUARE ENIX CO., LTD.</p>
             </div>
         </div>
     </section>
