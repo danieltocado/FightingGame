@@ -69,8 +69,13 @@ let partida = {
     fighter1: "",
     fighter2: "",
     first: "",
+};
 
-    pelea(luchador1,luchador2) {
+
+
+
+
+    /*pelea(luchador1,luchador2) {
         
         this.fighter1 = luchador1;
         this.fighter2 = luchador2;
@@ -90,7 +95,5 @@ let partida = {
                 console.log('first 2');
             };
         }
-      
-    }
+    }*/
 
-};
