@@ -15,18 +15,14 @@ class Fighter {
 
     atacar() {
         let luck = funciones.random(1,enemigo.suerte);
-
         let hit = (this.ataque - enemigo.defensa) * luck;
+        let speed = func.random(1,100);
+
+        if (speed < enemigo.velocidad) {
+            hit -= func.random(1,5);
+        }
 
         enemigo.vida -= hit;
-    }
-
-    defenderse() {
-
-    }
-
-    esquivar() {
-
     }
 
     especial() {
@@ -65,4 +61,36 @@ let allplayers = {
     "10": f10,
 }
 
+//Partida
 
+let partida = {
+    turno: 0,
+    ganador: "",
+    fighter1: "",
+    fighter2: "",
+    first: "",
+
+    pelea(luchador1,luchador2) {
+        
+        this.fighter1 = luchador1;
+        this.fighter2 = luchador2;
+
+        this.turno++; //sig turno
+
+        //Funcion random primer ataque
+
+        first = funciones.random(1,3);
+
+        if (this.fighter1.vida > 0) {
+            if (first == 1) {
+                this.fighter1.atacar(this.fighter2);
+                console.log('first 1');
+            } else if (first == 2) {
+                this.fighter2.atacar(this.fighter1);
+                console.log('first 2');
+            };
+        }
+      
+    }
+
+};

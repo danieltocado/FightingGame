@@ -58,8 +58,10 @@
   background-repeat: no-repeat; 
 }
 
-#pantalla5 img {
-    
+#health {
+    color: white;
+    height: 50px;
+    width: 200px;
 }
 
 .red {
@@ -127,7 +129,7 @@
     display: flex;
     justify-content: center;
     font-family: start, sans-serif;
-    color: #acc1d7;
+    color: blue;
     background-color: black;
     padding-top: 30px;
   
@@ -386,7 +388,7 @@
 }
 
 .teamblue p {
-    color: #acc1d7;
+    color: blue;
 }
 
 .teamred p {
@@ -396,13 +398,47 @@
 /* PANTALLA LUCHA */
 
 .header-lucha {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.headercentro-lucha {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "start";
+    font-size: 35px;
     color: white;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.separa {
+    height: 15px;
+}
+
+.separa2 {
+    width: 15px;
+}
+
+
+.info-equipo {
+    margin-top: 30px;
+    
+    
+}
+
+.container-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .container-pelea {
     display: flex;
+    width: 100%;
+    height: 70%;
     justify-content: space-around;
     align-items: flex-end;
     flex-direction: row;
@@ -410,8 +446,57 @@
     
 }
 
-.luchador-sprite img{
-   
+.lucha-ataque {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.vida-equipo {
+    display: flex;
+    flex-direction: row;
+    background-color: hsla(0, 100%, 90%, 0.3);
+    border-radius: 10px;
+    border: 1px solid hsla(0, 100%, 90%, 0.3);
+    height: 130px;
+}
+
+.info-ingame {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.luchador-vida {
+    font-size: 4em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+
+.luchador1-nombre {
+    text-transform: uppercase;
+    color: blue;
+    font-family: "start";
+    font-size: 20px;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    margin-left: 10px;
+}
+
+.luchador2-nombre {
+    text-transform: uppercase;
+    color: red;
+    font-family: "start";
+    font-size: 20px;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    margin-left: 10px;
+}
+
+.luchador-vida {
+    color: white;
 }
     
           

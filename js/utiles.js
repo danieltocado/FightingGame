@@ -20,9 +20,9 @@ document.onkeypress = function(key_dtl) {
     key_dtl = key_dtl || window.event; 
     var uni_code = key_dtl.keyCode || key_dtl.which; 
     var key_name = String.fromCharCode(uni_code); 
-    setTimeout(function(){ organizer(2);},3000);
+    setTimeout(function(){ organizer(2);},1000);
     
-    var audio = new Audio('/sound/click.mp3');
+    var audio = new Audio('/sound/super-smash-bros-ultimate-press-start-sound-effect.mp3');
     audio.play();
    }
 
@@ -53,3 +53,6 @@ function randombg(){
                    ];
     document.getElementById("pantalla5").style.backgroundImage=bigSize[random];
   }
+
+
+  
