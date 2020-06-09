@@ -13,13 +13,13 @@ class Fighter {
         this.vida = 100;
     }
 
-    atacar() {
+    atacar(enemigo) {
         let luck = funciones.random(1,enemigo.suerte);
         let hit = (this.ataque - enemigo.defensa) * luck;
-        let speed = func.random(1,100);
+        let speed = funciones.random(1,100);
 
         if (speed < enemigo.velocidad) {
-            hit -= func.random(1,5);
+            hit -= funciones.random(1,5);
         }
 
         enemigo.vida -= hit;
@@ -64,36 +64,112 @@ let allplayers = {
 //Partida
 
 let partida = {
-    turno: 0,
-    ganador: "",
+    turno1: 0,
+    winner: "",
     fighter1: "",
     fighter2: "",
     first: "",
+    victoriap1: "",
+    victoriap2: "",
+
+    resetPelea(){
+        this.turno1 = 0;
+        this.first = "";
+        this.fighter1 = "";
+        this.fighter2 = "";
+    },
+
+    limpiarPelea() {
+        this.resetPelea();
+        juego.turno++;
+        this.fighter1.vida = 200;
+        this.fighter2.vida = 200;
+
+        juego.faselucha();
+    },
+
+    pelea(arglu1,arglu2){
+
+        first = funciones.random(1, 3);
+
+        this.turno1++;
+        this.fighter1 = arglu1;
+        this.fighter2 = arglu2;
+
+
+        //estado y acciones luchador1
+        if(this.fighter1.vida > 0){
+                if(first == 1) {
+                    this.victoriap1 = (this.fighter2 <= 0) ? "v" : "m";
+                    if(this.victoriap1 == "v") {
+                        //Ganaria el jugador1
+                    }else {
+                        this.fighter1.atacar(this.fighter2);
+
+                        if(this.fighter2.vida < 0) {
+                            this.fighter2.vida = 0;
+                        }
+
+                        let lbact = document.getElementById("vida2");
+                        lbact.innerHTML = `${this.fighter2.vida}%`;
+
+
+                    }
+                }
+        } else {
+            //gana jugador2
+            document.getElementById("fist").onclick = "";
+            this.winner = `THE WINNER IS ${this.fighter2.nombre}`;
+
+            let koknow2 = document.getElementById("anuncioko");
+            koknow2.innerHTML = `THE WINNER IS ${this.fighter2.nombre}`;
+
+            partida.team2wins++;
+
+            setTimeout(init2 = () =>{
+                this.limpiarPelea()}
+                ,2000);
+        }
+
+        if(this.fighter2.vida > 0) {
+            if(first == 2) {
+                this.victoriap2 = (this.fighter1.vida <= 0) ? "v" : "m";
+                if (this.victoriap2 == "v") {
+                    //gana el jugador2
+                } else {
+                    this.fighter2.atacar(this.fighter1);
+
+                    if(this.fighter1.vida < 0) {
+                        this.fighter1.vida = 0;
+                    }
+
+                    let lbact = document.getElementById("vida1");
+                    lbact.innerHTML = `${this.fighter1.vida}%`;
+
+                }
+            }
+        } else {
+            //gana jugador 1
+            this.winner = `THE WINNER IS ${this.fighter1.nombre} `;
+            document.getElementById("fist").onclick = "";
+
+            let koknow = document.getElementById("anuncioko");
+
+            koknow.innerHTML = `THE WINNER IS ${this.fighter1.nombre} `;
+
+            partida.team1wins++;
+
+            setTimeout(init2 = () =>{
+                this.limpiarPelea()}
+                ,2000);
+        }
+    }
+
+
 };
 
 
 
 
 
-    /*pelea(luchador1,luchador2) {
-        
-        this.fighter1 = luchador1;
-        this.fighter2 = luchador2;
-
-        this.turno++; //sig turno
-
-        //Funcion random primer ataque
-
-        first = funciones.random(1,3);
-
-        if (this.fighter1.vida > 0) {
-            if (first == 1) {
-                this.fighter1.atacar(this.fighter2);
-                console.log('first 1');
-            } else if (first == 2) {
-                this.fighter2.atacar(this.fighter1);
-                console.log('first 2');
-            };
-        }
-    }*/
-
+  

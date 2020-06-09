@@ -52,15 +52,15 @@
             <div class="luchadores custom-cursor">
                 <div class="luchador">
                     
-                    <div class="fotoluchador"><img src="/img/pj/Mario/chara_3_mario_00.png" alt="" id="1" onclick="juego.escoge1(this.id);">
+                    <div class="fotoluchador"><img src="/img/pj/Mario/chara_3_mario_00.png" alt="" id="1" onclick="juego.escoge1(this.id)" ondragstart="drag(event)" draggable="true"\>
                     <div class="nombre">Mario</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Luigi/chara_3_luigi_00.png" alt="" id="2" onclick="juego.escoge1(this.id);">
+                    <div class="fotoluchador"><img src="/img/pj/Luigi/chara_3_luigi_00.png" alt="" id="2" draggable="true" ondragstart="drag(event)" onclick="juego.escoge1(this.id);">
                     <div class="nombre">Luigi</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Bowser/chara_3_koopa_00.png" alt="" id="3" onclick="juego.escoge1(this.id);">
+                    <div class="fotoluchador"><img src="/img/pj/Bowser/chara_3_koopa_00.png" alt="" id="3" draggable="true" ondragstart="drag(event)" onclick="juego.escoge1(this.id);">
                     <div class="nombre">Bowser</div></div>
                 </div>
                 <div class="luchador">
@@ -97,9 +97,9 @@
             </div>
         </div>
         <div class="container-luchadores">
-            <div id="player0" class="cont-luchador"></div>
-            <div id="player1" class="cont-luchador"></div>
-            <div id="player2" class="cont-luchador"></div>
+            <div id="player0" class="cont-luchador" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="player1" class="cont-luchador" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="player2" class="cont-luchador" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </div>
     </div>
     
@@ -117,7 +117,10 @@
 
     <section class="secvis" id="pantalla5" style="display:none" >
         
+    </section>
 
+    <section class="secvis" id="pantalla6" style="display:none" >
+        
     </section>
 
 

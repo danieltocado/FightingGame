@@ -2,10 +2,12 @@ let juego = {
     //propiedades
     equipo1: [],
     equipo2: [],
+    team1wins: 0,
+    team2wins: 0,
     stats: [],
-    luchador1: [],
-    luchador2: [],
-    turno: [],
+    luchador1: "",
+    luchador2: "",
+    turno: 0,
 
     //métodos
     escoge1(idLuchador){
@@ -14,6 +16,7 @@ let juego = {
 
         for (let i = 0; i < this.equipo1.length; i++) {
             this.stats = document.getElementById("player" + i);
+            
             this.stats.innerHTML = 
                 `
                 <img class="fotoluchador" src="/img/pj/selec/selec_${this.equipo1[i].id}.png">
@@ -199,30 +202,36 @@ let juego = {
 
         <div class="container-pelea">
             <div class="container-equipo">
-                <div class="luchador-sprite"><img src="./img/sprites/sprite_${this.equipo1[0].id}_equipo_1.png"></div>
+                <div class="luchador-sprite"><img src="./img/sprites/sprite_${this.equipo1[this.turno].id}_equipo_1.png"></div>
             </div>
             <div class="separa2"></div>
             <div class="container-equipo">
-                <div class="luchador-sprite"><img src="./img/sprites/sprite_${this.equipo2[0].id}_equipo_2.png"></div>
+                <div class="luchador-sprite"><img src="./img/sprites/sprite_${this.equipo2[this.turno].id}_equipo_2.png"></div>
             </div>
+        </div>
+
+        <div class="announcement">
+            <div class="ann1"></div>
+            <div id ="anuncioko" class="ann2"></div>
+            <div class="ann3"></div>
         </div>
 
         <div class="lucha-ataque">
             <div class="vida-equipo">
-                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[0].id}.png">
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[this.turno].id}.png">
                 <div class="info-ingame">
-                    <div id="vida1" class="luchador-vida">${this.equipo1[0].vida}%</div>
-                    <div class="luchador1-nombre"><p>${this.equipo1[0].nombre}</p></div>
+                    <div id="vida1" class="luchador-vida">${this.equipo1[this.turno].vida}%</div>
+                    <div class="luchador1-nombre"><p>${this.equipo1[this.turno].nombre}</p></div>
                 </div>
             </div>
             <div class="atacar">
-                <img src="/img/lucha/hit.png" alt="" onclick="partida.pelea(luchador1,luchador2)">
+                <img id="fist" src="/img/lucha/hit.png" alt="" onclick="partida.pelea(luchador1,luchador2)">
             </div>
             <div class="vida-equipo">
-                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[0].id}.png">
+                <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[this.turno].id}.png">
                 <div class="info-ingame">
-                    <div id="vida2" class="luchador-vida">${this.equipo2[0].vida}%</div>
-                    <div class="luchador2-nombre"><p>${this.equipo2[0].nombre}</p></div>
+                    <div id="vida2" class="luchador-vida">${this.equipo2[this.turno].vida}%</div>
+                    <div class="luchador2-nombre"><p>${this.equipo2[this.turno].nombre}</p></div>
                 </div>
             </div>
             
@@ -238,10 +247,43 @@ let juego = {
 
 
     } else {
-        console.log('holaholaaaaa')
+        setTimeout(init2 = () =>{
+            this.endgame()}
+            ,2000);
         
             }
-        },
+    },
+    endgame() {
+        organizer(6);
+        let team_winner = "";
+
+        //comprobando equipo ganador
+        if (this.team1wins > this.team2wins) {
+            numero = 1;
+            team_winner = this.equipo1;
+        } else {
+            numero = 2;
+            team_winner = this.equipo2;
+        };    console.log('estoy aqui')
+
+        let seccionGanador = document.getElementById('pantalla6');
+
+        seccionGanador.innerHTML = `
+        <div class="tituloGanador">
+            <h1>TEAM ${numero} WINS</h1>
+        </div>
+        <div class="prelucha1">
+            
+            <img class="fotoluchador" src="/img/pj/cortadas/cortada_${team_winner[0].id}.png">  
+           
+            <img class="fotoluchador" src="/img/pj/cortadas/cortada_${team_winner[1].id}.png">  
+            
+            <img class="fotoluchador" src="/img/pj/cortadas/cortada_${team_winner[2].id}.png">
+        </div>
+        <div>
+            <p class="reiniciarJuego" onclick="partida.init1()">REINICIAR JUEGO</p>
+        </div>`
+    }
 
 }
 
@@ -249,7 +291,7 @@ const organizer = (arg_O) => {
 
     let fasewant = "pantalla" + arg_O;
     
-    let arrFases = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5"];
+    let arrFases = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6"];
 
     arrFases = arrFases.filter(val => !fasewant.includes(val));
 
