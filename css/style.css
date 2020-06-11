@@ -59,7 +59,10 @@ html, body{
 }
 
 #pantalla6 {
-    background-color: black;
+    background-image: url(/img/winner/wallpaper.jpg); 
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 #health {
@@ -377,6 +380,11 @@ html, body{
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 
+.announcement {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
 .separa {
     height: 15px;
 }
@@ -399,7 +407,7 @@ html, body{
 .container-pelea {
     display: flex;
     width: 100%;
-    height: 70%;
+    height: 65%;
     justify-content: space-around;
     align-items: flex-end;
     flex-direction: row;
@@ -444,6 +452,7 @@ html, body{
     font-size: 20px;
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .luchador2-nombre {
@@ -453,12 +462,63 @@ html, body{
     font-size: 20px;
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .luchador-vida {
     color: white;
 }
+ 
+.tituloWinner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "start";
+    font-size: 35px;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    padding-top: 20px;
+}
+
+.containerWinner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
+}
+
+.ganadores {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding-top: 19%;
+}
+
+.ganadores img {
+    margin-right: 75px;
+    margin-left: 75px;
+    
+}
+
+.footerWinner {
+    width: 100%;
+    height: 150px;
+    
+    display: flex;
+    align-items: flex-end;
+}
+
+.diagonalnegra {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 170px 0 0 80em;
+    border-color: transparent transparent transparent #000000;
+    position: absolute;
+}
+
           
     
      

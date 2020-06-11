@@ -197,9 +197,16 @@ let juego = {
                 <div id="contador"></div>
             </div>
             
+    
         
         </div>
-
+        <div class="headercentro-lucha">
+            <div class="announcement">
+                <div class="ann1"></div>
+                <div id ="anuncioko" class="ann2"></div>
+                <div class="ann3"></div>
+            </div>
+        </div>
         <div class="container-pelea">
             <div class="container-equipo">
                 <div class="luchador-sprite"><img src="./img/sprites/sprite_${this.equipo1[this.turno].id}_equipo_1.png"></div>
@@ -210,17 +217,12 @@ let juego = {
             </div>
         </div>
 
-        <div class="announcement">
-            <div class="ann1"></div>
-            <div id ="anuncioko" class="ann2"></div>
-            <div class="ann3"></div>
-        </div>
-
         <div class="lucha-ataque">
             <div class="vida-equipo">
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[this.turno].id}.png">
                 <div class="info-ingame">
                     <div id="vida1" class="luchador-vida">${this.equipo1[this.turno].vida}%</div>
+                    <img src="/img/lucha/Healing_Potion.png" alt="">
                     <div class="luchador1-nombre"><p>${this.equipo1[this.turno].nombre}</p></div>
                 </div>
             </div>
@@ -230,7 +232,8 @@ let juego = {
             <div class="vida-equipo">
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[this.turno].id}.png">
                 <div class="info-ingame">
-                    <div id="vida2" class="luchador-vida">${this.equipo2[this.turno].vida}%</div>
+                    <div id="vida2" ondrop="drop(event)" ondragover="allowDrop(event)"class="luchador-vida">${this.equipo2[this.turno].vida}%</div>
+                    <img id="dragpoti" draggable="true" ondragstart="drag(event)" src="/img/lucha/Healing_Potion.png" alt="">
                     <div class="luchador2-nombre"><p>${this.equipo2[this.turno].nombre}</p></div>
                 </div>
             </div>
@@ -269,19 +272,31 @@ let juego = {
         let seccionGanador = document.getElementById('pantalla6');
 
         seccionGanador.innerHTML = `
-        <div class="tituloGanador">
-            <h1>TEAM ${numero} WINS</h1>
-        </div>
-        <div class="prelucha1">
+        <div class="containerWinner">
             
-            <img class="fotoluchador" src="/img/pj/cortadas/cortada_${team_winner[0].id}.png">  
-           
-            <img class="fotoluchador" src="/img/pj/cortadas/cortada_${team_winner[1].id}.png">  
+            <div class="tituloWinner">
+                <h1>TEAM ${numero} WINS</h1>
+            </div>
             
-            <img class="fotoluchador" src="/img/pj/cortadas/cortada_${team_winner[2].id}.png">
-        </div>
-        <div>
-            <p class="reiniciarJuego" onclick="partida.init1()">REINICIAR JUEGO</p>
+            
+            <div class="ganadores">
+                <img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[0].id}.png">  
+            
+                <img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[1].id}.png">  
+                
+                <img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[2].id}.png">
+            </div>
+            
+            <div>
+                <p class="reiniciarJuego" onclick="partida.init1()">REINICIAR JUEGO</p>
+            </div>
+
+            <div class="footerWinner">
+                <div class="diagonalnegra">
+                </div>
+            </div>
+            
+            
         </div>`
     }
 
