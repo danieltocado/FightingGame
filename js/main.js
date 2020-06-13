@@ -80,53 +80,76 @@ let juego = {
         <div class="titulo red"><h1>PLAYER 2 - CHOOSE YOUR FIGHTERS</h1></div>
             
         <div class="panel-luchadores">
-            
             <div class="luchadores custom-cursor">
                 <div class="luchador">
                     
-                    <div class="fotoluchador"><img src="/img/pj/Mario/chara_3_mario_00.png" alt="" id="1" onclick="juego.escoge2(this.id);">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_1.png" alt="" id="1" onclick="juego.escoge2(this.id)" ondragstart="drag(event)" draggable="true"\>
                     <div class="nombre">Mario</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Luigi/chara_3_luigi_00.png" alt="" id="2" onclick="juego.escoge2(this.id);">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_2.png" alt="" id="2" draggable="true" ondragstart="drag(event)" onclick="juego.escoge2(this.id);">
                     <div class="nombre">Luigi</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Bowser/chara_3_koopa_00.png" alt="" id="3" onclick="juego.escoge2(this.id);">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_3.png" alt="" id="3" draggable="true" ondragstart="drag(event)" onclick="juego.escoge2(this.id);">
                     <div class="nombre">Bowser</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Sonic/chara_3_sonic_00.png" alt="" id="4" onclick="juego.escoge2(this.id)">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_4.png" alt="" id="4" onclick="juego.escoge2(this.id);">
                     <div class="nombre">Sonic</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Captain Falcon/chara_3_captain_00.png" alt="" id="5" onclick="juego.escoge2(this.id)">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_5.png" alt="" id="5" onclick="juego.escoge2(this.id);">
                     <div class="nombre">Captain Falcon</div></div>
                 </div>
             </div>
-
+            
             <div class="luchadores custom-cursor">
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Donkey Kong/chara_3_donkey_00.png" alt="" id="6" onclick="juego.escoge2(this.id)">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_6.png" alt="" id="6" onclick="juego.escoge2(this.id)">
                     <div class="nombre">Donkey Kong</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Fox/chara_3_fox_00.png" alt="" id="7" onclick="juego.escoge2(this.id)">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_7.png" alt="" id="7" onclick="juego.escoge2(this.id)">
                     <div class="nombre">Fox</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Link/chara_3_link_01.png" alt="" id="8" onclick="juego.escoge2(this.id)">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_8.png" alt="" id="8" onclick="juego.escoge2(this.id)">
                     <div class="nombre">Link</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Pikachu/chara_3_pikachu_00.png" alt="" id="9" onclick="juego.escoge2(this.id)">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_9.png" alt="" id="9" onclick="juego.escoge2(this.id)">
                     <div class="nombre">Pikachu</div></div>
                 </div>
                 <div class="luchador">
-                    <div class="fotoluchador"><img src="/img/pj/Samus/chara_3_samus_00.png" alt="" id="10" onclick="juego.escoge2(this.id)">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_10.png" alt="" id="10" onclick="juego.escoge2(this.id)">
                     <div class="nombre">Samus</div></div>
                 </div>
             </div>
+            <div class="luchadores custom-cursor">
+                <div class="luchador">
+                    
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_11.png" alt="" id="11" onclick="juego.escoge2(this.id)" ondragstart="drag(event)" draggable="true"\>
+                    <div class="nombre">Peach</div></div>
+                </div>
+                <div class="luchador">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_12.png" alt="" id="12" draggable="true" ondragstart="drag(event)" onclick="juego.escoge2(this.id);">
+                    <div class="nombre">Kirby</div></div>
+                </div>
+                <div class="luchador">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_13.png" alt="" id="13" draggable="true" ondragstart="drag(event)" onclick="juego.escoge2(this.id);">
+                    <div class="nombre">Yoshi</div></div>
+                </div>
+                <div class="luchador">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_14.png" alt="" id="14" onclick="juego.escoge2(this.id);">
+                    <div class="nombre">Banjo</div></div>
+                </div>
+                <div class="luchador">
+                    <div class="fotoluchador"><img src="/img/pj/panel/panel_15.png" alt="" id="15" onclick="juego.escoge2(this.id);">
+                    <div class="nombre">Cloud</div></div>
+                </div>
+            </div>
+        </div>
         </div>
             <div class="container-luchadores-red">
                 <div id="play0" class="cont-luchador-red"></div>
@@ -168,9 +191,13 @@ let juego = {
                     <img class="fotoluchador" src="/img/pj/cortadas/cortada_${this.equipo2[1].id}.png">
                     ${this.equipo2[2].nombre}
                     <img class="fotoluchador" src="/img/pj/cortadas/cortada_${this.equipo2[2].id}.png">
+                    <div id="loading">
+                        <div id="preloader5"></div> 
+                    </div>
                 </div>
-            </div> 
-        </div>`
+            </div>
+            </div>
+            `
         
         setTimeout(init2 = () =>{
             this.faselucha()}
@@ -201,10 +228,10 @@ let juego = {
         
         </div>
         <div class="headercentro-lucha">
-            <div class="announcement">
-                <div class="ann1"></div>
-                <div id ="anuncioko" class="ann2"></div>
-                <div class="ann3"></div>
+            <div class="anuncio-ganador">
+                <div class="sep"></div>
+                <div id ="thewinneris"></div>
+                <div class="sep"></div>
             </div>
         </div>
         <div class="container-pelea">
@@ -227,7 +254,7 @@ let juego = {
                 </div>
             </div>
             <div class="atacar">
-                <img id="fist" src="/img/lucha/hit.png" alt="" onclick="partida.pelea(luchador1,luchador2)">
+                <img id="golpe" src="/img/lucha/hit.png" alt="" onclick="partida.pelea(luchador1,luchador2)">
             </div>
             <div class="vida-equipo">
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[this.turno].id}.png">
@@ -275,24 +302,24 @@ let juego = {
         <div class="containerWinner">
             
             <div class="tituloWinner">
-                <h1>TEAM ${numero} WINS</h1>
+                <h1>TEAM ${numero}</h1>
+                <img src="/img/winner/youwin.png" alt="" srcset="">
             </div>
             
             
-            <div class="ganadores">
-                <img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[0].id}.png">  
+            <div class="container-luchadores-win ganadores">
+                <div class="cont-luchador-win"><img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[0].id}.png"></div> 
             
-                <img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[1].id}.png">  
+                <div class="cont-luchador-win"><img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[1].id}.png"></div> 
                 
-                <img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[2].id}.png">
-            </div>
-            
-            <div>
-                <p class="reiniciarJuego" onclick="partida.init1()">REINICIAR JUEGO</p>
+                <div class="cont-luchador-win"><img class="fotoluchador" src="/img/pj/selec/selec_${team_winner[2].id}.png"></div>
             </div>
 
             <div class="footerWinner">
                 <div class="diagonalnegra">
+                    <div>
+                        <p class="playagain" onclick="organizer(2)">PLAY AGAIN</p>
+                    </div>
                 </div>
             </div>
             

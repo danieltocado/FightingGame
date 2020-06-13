@@ -45,6 +45,12 @@ let f7 = new Fighter('7','','Fox', 20, 10, 8, 15, 6, 3);
 let f8 = new Fighter('8','','Link', 20, 10, 8, 15, 6, 3);
 let f9 = new Fighter('9','','Pikachu', 20, 10, 8, 15, 6, 3);
 let f10 = new Fighter('10','','Samus', 20, 10, 8, 15, 6, 3);
+let f11 = new Fighter('11','','Peach', 20, 10, 8, 15, 6, 3);
+let f12 = new Fighter('12','','Kirby', 20, 10, 8, 15, 6, 3);
+let f13 = new Fighter('13','','Yoshi', 20, 10, 8, 15, 6, 3);
+let f14 = new Fighter('14','','Banjo', 20, 10, 8, 15, 6, 3);
+let f15 = new Fighter('15','','Cloud', 20, 10, 8, 15, 6, 3);
+
 
 //Traductor
 
@@ -59,6 +65,11 @@ let allplayers = {
     "8": f8,
     "9": f9,
     "10": f10,
+    "11": f11,
+    "12": f12,
+    "13": f13,
+    "14": f14,
+    "15": f15,
 }
 
 //Partida
@@ -69,8 +80,8 @@ let partida = {
     fighter1: "",
     fighter2: "",
     first: "",
-    victoriap1: "",
-    victoriap2: "",
+    victoriateam1: "",
+    victoriateam2: "",
 
     resetPelea(){
         this.turno1 = 0;
@@ -88,20 +99,19 @@ let partida = {
         juego.faselucha();
     },
 
-    pelea(arglu1,arglu2){
-
-        first = funciones.random(1, 3);
+    pelea(fig1,fig2){
 
         this.turno1++;
-        this.fighter1 = arglu1;
-        this.fighter2 = arglu2;
+        this.fighter1 = fig1;
+        this.fighter2 = fig2;
 
+        first = funciones.random(1, 3);
 
         //estado y acciones luchador1
         if(this.fighter1.vida > 0){
                 if(first == 1) {
-                    this.victoriap1 = (this.fighter2 <= 0) ? "v" : "m";
-                    if(this.victoriap1 == "v") {
+                    this.victoriateam1 = (this.fighter2 <= 0) ? "w" : "l";
+                    if(this.victoriateam1 == "w") {
                         //Ganaria el jugador1
                     }else {
                         this.fighter1.atacar(this.fighter2);
@@ -118,10 +128,10 @@ let partida = {
                 }
         } else {
             //gana jugador2
-            document.getElementById("fist").onclick = "";
+            document.getElementById("golpe").onclick = "";
             this.winner = `THE WINNER IS ${this.fighter2.nombre}`;
 
-            let koknow2 = document.getElementById("anuncioko");
+            let koknow2 = document.getElementById("thewinneris");
             koknow2.innerHTML = `THE WINNER IS ${this.fighter2.nombre}`;
 
             partida.team2wins++;
@@ -133,8 +143,8 @@ let partida = {
 
         if(this.fighter2.vida > 0) {
             if(first == 2) {
-                this.victoriap2 = (this.fighter1.vida <= 0) ? "v" : "m";
-                if (this.victoriap2 == "v") {
+                this.victoriateam2 = (this.fighter1.vida <= 0) ? "w" : "l";
+                if (this.victoriateam2 == "w") {
                     //gana el jugador2
                 } else {
                     this.fighter2.atacar(this.fighter1);
@@ -151,9 +161,9 @@ let partida = {
         } else {
             //gana jugador 1
             this.winner = `THE WINNER IS ${this.fighter1.nombre} `;
-            document.getElementById("fist").onclick = "";
+            document.getElementById("golpe").onclick = "";
 
-            let koknow = document.getElementById("anuncioko");
+            let koknow = document.getElementById("thewinneris");
 
             koknow.innerHTML = `THE WINNER IS ${this.fighter1.nombre} `;
 
