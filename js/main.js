@@ -77,7 +77,8 @@ let juego = {
     
         let pantalla3 = document.getElementById("pantalla3");
         pantalla3.innerHTML = ` 
-        <div class="titulo red"><h1>PLAYER 2 - CHOOSE YOUR FIGHTERS</h1></div>
+        <div class="titulo red"><img src="/img/prelucha/player2choose.png" alt="" srcset="">
+        </div>
             
         <div class="panel-luchadores">
             <div class="luchadores custom-cursor">
@@ -166,9 +167,11 @@ let juego = {
         let pantalla4 = document.getElementById("pantalla4");
         pantalla4.innerHTML = `
             <div class="getready-container">
-                <div class="teamblue"><p>TEAM BLUE</p></div>
+                <div class="teamblue"><img src="/img/prelucha/player1fighters.png" alt="" srcset="">
+                </div>
                 <div class="getready"><img src="/img/lucha/fight.png" alt=""></div>
-                <div class="teamred"><p>TEAM RED</p></div>
+                <div class="teamred"><img src="/img/prelucha/player2fighters.png" alt="" srcset="">
+                </div>
             </div>
             <div class="prelucha-container">
                 <div class="prelucha1">
@@ -302,7 +305,7 @@ let juego = {
         <div class="containerWinner">
             
             <div class="tituloWinner">
-                <h1>TEAM ${numero}</h1>
+                <h1>PLAYER ${numero}</h1>
                 <img src="/img/winner/youwin.png" alt="" srcset="">
             </div>
             
@@ -316,11 +319,12 @@ let juego = {
             </div>
 
             <div class="footerWinner">
-                <div class="diagonalnegra">
-                    <div>
-                        <p class="playagain" onclick="organizer(2)">PLAY AGAIN</p>
-                    </div>
-                </div>
+           
+                    
+                        <div class="playagain" onclick="window.location.reload(true)">        <img src="/img/winner/playagain.png" alt="" srcset="">
+                        </div>
+                    
+              
             </div>
             
             
