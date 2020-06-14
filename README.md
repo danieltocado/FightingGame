@@ -1,4 +1,4 @@
-# JS Fighting Game (PreAlpha)
+# JS Fighting Game (Alpha)
 
 _Fighting game made with JavaScript_
 
@@ -8,19 +8,19 @@ _Fighting game made with JavaScript_
 
 - Pick three fighters for each team.
 
-- Just press the hit button to attack!
+- Press the hit button to attack!
 
-- You can only heal one time per round your fighter by droping his potion below him.
+- You can only heal your fighter once per round by dropping the potion below him.
 
 ## Known bugs
 
-- Seems like player 1 cant ever win :(
+- Seems like player 1 can't ever win :(
 
-- If player 1 heals himself first, both potions will disappear. Not happening if player 2 heals first.
+- If player 1 heals himself first, both potions will disappear. Doesn't happen if player 2 heals first.
 
-- When picking the team2 fighters, they won't disappear from the panel.
+- When picking the team2 fighters they don't disappear from the panel.
 
-- Some stats from the fighters are quite disbalanced at this moment.
+- Some stats from the fighters are quite unbalanced at this moment.
 
 # SCREENSHOTS
 
