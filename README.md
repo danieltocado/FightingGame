@@ -4,21 +4,35 @@ _Fighting game made with JavaScript_
 
 **This project is still WIP**
 
-## START SCREEN 
+## Known bugs
+
+- Seems like player 2 cant ever win :(
+
+- If player 1 heals himself first, both potions will dissapear. Not happening if player 2 heals first.
+
+# SCREENSHOTS
+
+## Start Screen
 
 ![alt text](https://i.imgur.com/rZ1yQkG.png)
 
-## CHARACTER SELECT
+## Character Select
 
-![alt text](https://i.imgur.com/5kKDjY7.png)
+![alt text](https://i.imgur.com/6zJFJXk.png)
 
-## READY...
+![alt text](https://i.imgur.com/Q8RY7N0.png)
 
-![alt text](https://i.imgur.com/Ab8CQfN.png)
+## Ready...
+
+![alt text](https://i.imgur.com/PUm6PiN.png)
 
 ## FIGHT!
 
-![alt text](https://i.imgur.com/gYGWfxs.png)
+![alt text](https://i.imgur.com/t2BrkXT.png)
+
+## The winner is...!
+
+![alt text](https://i.imgur.com/kYWzeIF.png)
 
 
 
