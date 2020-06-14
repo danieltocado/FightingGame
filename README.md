@@ -8,7 +8,9 @@ _Fighting game made with JavaScript_
 
 - Seems like player 2 cant ever win :(
 
-- If player 1 heals himself first, both potions will dissapear. Not happening if player 2 heals first.
+- If player 1 heals himself first, both potions will disappear. Not happening if player 2 heals first.
+
+- When picking the team2 fighters, they won't disappear from the panel.
 
 # SCREENSHOTS
 
