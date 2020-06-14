@@ -14,7 +14,7 @@ _Fighting game made with JavaScript_
 
 ## Known bugs
 
-- Seems like player 2 cant ever win :(
+- Seems like player 1 cant ever win :(
 
 - If player 1 heals himself first, both potions will disappear. Not happening if player 2 heals first.
 
