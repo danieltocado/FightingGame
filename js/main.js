@@ -153,9 +153,11 @@ let juego = {
         </div>
         </div>
             <div class="container-luchadores-red">
+                <div class="luchadores-objeto1"><img src="/img/start/team2pick.png" alt=""></div>
                 <div id="play0" class="cont-luchador-red"></div>
                 <div id="play1" class="cont-luchador-red"></div>
                 <div id="play2" class="cont-luchador-red"></div>
+                <div class="luchadores-objeto2"></div><img src="/img/start/SmashBall.png" alt="" srcset=""></div>
             </div>
         </div>`;
     },
@@ -251,8 +253,8 @@ let juego = {
             <div class="vida-equipo">
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo1[this.turno].id}.png">
                 <div class="info-ingame">
-                    <div id="vida1" class="luchador-vida">${this.equipo1[this.turno].vida}%</div>
-                    <img src="/img/lucha/Healing_Potion.png" alt="">
+                    <div id="vida1" ondrop="drop(event)" ondragover="allowDrop(event)"class="luchador-vida">${this.equipo1[this.turno].vida}%</div>
+                    <img id="dragpoti1" draggable="true" ondragstart="drag(event)" src="/img/lucha/Healing_Potion.png" alt="">
                     <div class="luchador1-nombre"><p>${this.equipo1[this.turno].nombre}</p></div>
                 </div>
             </div>
@@ -262,8 +264,8 @@ let juego = {
             <div class="vida-equipo">
                 <img class="fotoluchador" src="/img/pj/ready/ready_${this.equipo2[this.turno].id}.png">
                 <div class="info-ingame">
-                    <div id="vida2" ondrop="drop(event)" ondragover="allowDrop(event)"class="luchador-vida">${this.equipo2[this.turno].vida}%</div>
-                    <img id="dragpoti" draggable="true" ondragstart="drag(event)" src="/img/lucha/Healing_Potion.png" alt="">
+                    <div id="vida2" ondrop="drop2(event)" ondragover="allowDrop2(event)"class="luchador-vida">${this.equipo2[this.turno].vida}%</div>
+                    <img id="dragpoti2" draggable="true" ondragstart="drag2(event)" src="/img/lucha/Healing_Potion.png" alt="">
                     <div class="luchador2-nombre"><p>${this.equipo2[this.turno].nombre}</p></div>
                 </div>
             </div>

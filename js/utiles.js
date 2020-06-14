@@ -55,7 +55,7 @@ function randombg(){
   }
 
 
-//Drag and drop
+//Drag and drop poti equipo 1
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -69,6 +69,33 @@ function allowDrop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
+    console.log("esto cura")
+    let vida1 = document.getElementById('dragpoti1').style.display = "none";
+    document.getElementById('vida1').innerHTML = "100%";
+    let vida2 = document.getElementById('dragpoti2').style.display = "none";
   }
+
+//Drag and drop poti equipo 2
+
+function allowDrop2(ev) {
+  ev.preventDefault();
+}
+
+function drag2(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop2(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  console.log("esto cura")
+  let vida2 = document.getElementById('dragpoti2').style.display = "none";
+  document.getElementById('vida2').innerHTML = "100%";
+  
+}
+
+
+
 
   

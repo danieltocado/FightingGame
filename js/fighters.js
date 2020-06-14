@@ -35,21 +35,21 @@ class Fighter {
 //Instanciamos a los luchadores
 // id, nombre, ataque, defensa, velocidad, suerte
 
-let f1 = new Fighter('1','','Mario', 20, 10, 8, 15, 6, 3);
-let f2 = new Fighter('2','','Luigi', 20, 10, 8, 15, 6, 3);
-let f3 = new Fighter('3','','Bowser', 20, 10, 8, 15, 6, 3);
-let f4 = new Fighter('4','','Sonic', 20, 10, 8, 15, 6, 3);
-let f5 = new Fighter('5','','Captain Falcon', 20, 10, 8, 15, 6, 3);
-let f6 = new Fighter('6','','Donkey Kong', 20, 10, 8, 15, 6, 3);
-let f7 = new Fighter('7','','Fox', 20, 10, 8, 15, 6, 3);
-let f8 = new Fighter('8','','Link', 20, 10, 8, 15, 6, 3);
-let f9 = new Fighter('9','','Pikachu', 20, 10, 8, 15, 6, 3);
-let f10 = new Fighter('10','','Samus', 20, 10, 8, 15, 6, 3);
-let f11 = new Fighter('11','','Peach', 20, 10, 8, 15, 6, 3);
-let f12 = new Fighter('12','','Kirby', 20, 10, 8, 15, 6, 3);
-let f13 = new Fighter('13','','Yoshi', 20, 10, 8, 15, 6, 3);
-let f14 = new Fighter('14','','Banjo', 20, 10, 8, 15, 6, 3);
-let f15 = new Fighter('15','','Cloud', 20, 10, 8, 15, 6, 3);
+let f1 = new Fighter('1','','Mario', 25, 14, 10, 15);
+let f2 = new Fighter('2','','Luigi', 23, 12, 10, 18);
+let f3 = new Fighter('3','','Bowser', 15, 25, 6, 13);
+let f4 = new Fighter('4','','Sonic', 20, 10, 25, 12);
+let f5 = new Fighter('5','','Captain Falcon', 24, 10, 10, 15);
+let f6 = new Fighter('6','','Donkey Kong', 18, 20, 8, 15);
+let f7 = new Fighter('7','','Fox', 20, 10, 8, 25);
+let f8 = new Fighter('8','','Link', 25, 10, 8, 15);
+let f9 = new Fighter('9','','Pikachu', 25, 12, 15, 8);
+let f10 = new Fighter('10','','Samus', 24, 10, 14, 15);
+let f11 = new Fighter('11','','Peach', 16, 8, 12, 25);
+let f12 = new Fighter('12','','Kirby', 25, 14, 7, 18);
+let f13 = new Fighter('13','','Yoshi', 23, 12, 15, 15);
+let f14 = new Fighter('14','','Banjo', 20, 10, 8, 15);
+let f15 = new Fighter('15','','Cloud', 25, 10, 12, 15);
 
 
 //Traductor
@@ -112,7 +112,6 @@ let partida = {
                 if(first == 1) {
                     this.victoriateam1 = (this.fighter2 <= 0) ? "w" : "l";
                     if(this.victoriateam1 == "w") {
-                        //Ganaria el jugador1
                     }else {
                         this.fighter1.atacar(this.fighter2);
 
@@ -120,10 +119,8 @@ let partida = {
                             this.fighter2.vida = 0;
                         }
 
-                        let lbact = document.getElementById("vida2");
-                        lbact.innerHTML = `${this.fighter2.vida}%`;
-
-
+                        let vidatoda = document.getElementById("vida2");
+                        vidatoda.innerHTML = `${this.fighter2.vida}%`;
                     }
                 }
         } else {
@@ -131,8 +128,8 @@ let partida = {
             document.getElementById("golpe").onclick = "";
             this.winner = `THE WINNER IS ${this.fighter2.nombre}`;
 
-            let koknow2 = document.getElementById("thewinneris");
-            koknow2.innerHTML = `THE WINNER IS ${this.fighter2.nombre}`;
+            let anuncioganador2 = document.getElementById("thewinneris");
+            anuncioganador2.innerHTML = `THE WINNER IS ${this.fighter2.nombre}`;
 
             partida.team2wins++;
 
@@ -145,7 +142,6 @@ let partida = {
             if(first == 2) {
                 this.victoriateam2 = (this.fighter1.vida <= 0) ? "w" : "l";
                 if (this.victoriateam2 == "w") {
-                    //gana el jugador2
                 } else {
                     this.fighter2.atacar(this.fighter1);
 
@@ -153,9 +149,8 @@ let partida = {
                         this.fighter1.vida = 0;
                     }
 
-                    let lbact = document.getElementById("vida1");
-                    lbact.innerHTML = `${this.fighter1.vida}%`;
-
+                    let vidatoda = document.getElementById("vida1");
+                    vidatoda.innerHTML = `${this.fighter1.vida}%`;
                 }
             }
         } else {
@@ -163,9 +158,9 @@ let partida = {
             this.winner = `THE WINNER IS ${this.fighter1.nombre} `;
             document.getElementById("golpe").onclick = "";
 
-            let koknow = document.getElementById("thewinneris");
+            let anuncioganador = document.getElementById("thewinneris");
 
-            koknow.innerHTML = `THE WINNER IS ${this.fighter1.nombre} `;
+            anuncioganador.innerHTML = `THE WINNER IS ${this.fighter1.nombre} `;
 
             partida.team1wins++;
 

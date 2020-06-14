@@ -365,13 +365,20 @@ html, body{
     margin-top: 0 auto;      
 }
 
-.container-luchadores-win{
-    display: flex;
+.container-luchadores-win {
+    display: flex; 
     justify-content: center;
     align-items: center;
     width: 100%;
-    
     margin-top: 0 auto;  
+}
+
+.luchadores-objeto1 {
+    margin-right: 50px;
+}
+
+.luchadores-objeto2 {
+    margin-left: 50px;
 }
 
 .foto-fighter {
