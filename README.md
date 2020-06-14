@@ -10,7 +10,7 @@ _Fighting game made with JavaScript_
 
 - Just press the hit button to attack!
 
-- You can heal one time per round your fighter by droping the potion below.
+- You can only heal one time per round your fighter by droping his potion below him.
 
 ## Known bugs
 
