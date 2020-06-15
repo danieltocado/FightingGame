@@ -72,7 +72,6 @@ function allowDrop(ev) {
     console.log("esto cura")
     let vida1 = document.getElementById('dragpoti1').style.display = "none";
     document.getElementById('vida1').innerHTML = "100%";
-    let vida2 = document.getElementById('dragpoti2').style.display = "none";
   }
 
 //Drag and drop poti equipo 2
